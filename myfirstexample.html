@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+  <title>Tutorial1</title>
+</head>
+<body ng-app="myapp">
+  <div ng-controller = "HelloController">
+    <h2>Welcome {{helloTo.title}} to the World of Tutorial1!</h2>
+    <script>
+      angular.module("myapp", [])
+
+      .controller("HelloController", function($scope){
+        $scope.helloTo = {};
+        $scope.helloTo.title = "AngularJS";
+      });
+    </script>
+
+  </div>
+</body>
+</html>
